@@ -22,6 +22,20 @@
     </div>
   </div>
 
+  <div>
+    {% for tag in tags %}
+    <div>
+      <input type="checkbox"
+             value="{{ tag.id }}"
+             id="tag_{{ tag.id }}"
+             name="tags">
+      <label for="tag_{{ tag.id }}">
+        {{ tag.name }}
+      </label>
+    </div>
+    {% endfor %}
+  </di
+
   <div class="form-group row">
     <div class="ml-auto mr-3">
       <a href="/users/{{ user.id }}" class="btn btn-info">Cancel</a>
